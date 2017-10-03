@@ -1,0 +1,14 @@
+{
+  "name": "ImageTiltEffect",
+  "homepage": "https://github.com/codrops/ImageTiltEffect",
+  "_release": "8714e14192",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8714e141920d7912eb6f9315407ffad1723d498b"
+  },
+  "_source": "git@github.com:codrops/ImageTiltEffect.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:codrops/ImageTiltEffect.git",
+  "_direct": true
+}

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dex | Blog</title>
+
+    <meta name="description" content="ESTRO – Responsive HTML Template">
+    <meta name="author" content="ArtRow Team">
+
+    <link rel="shortcut icon" href="~/assets/static/images/logos/Dexter_lab.jpg" type="image/jpg">
+
+    <!-- vendor styles -->
+    <link href="~/assets/static/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen"><!-- Bootstrap -->
+    <link href="~/assets/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen"><!-- Font Awesome -->
+    <link href="~/assets/static/vendor/fancybox/source/jquery.fancybox.css" rel="stylesheet" media="screen"><!-- Fancybox styles -->
+    <link href="~/assets/static/vendor/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" media="screen"><!-- Owl carousel -->
+    <link href="~/assets/static/vendor/ImageTiltEffect/css/tilteffect.css" rel="stylesheet" media="screen"><!-- Tilt Effect -->
+    <!-- template styles -->
+    <link href="~/assets/static/styles/themes/bronze_main.css" rel="stylesheet" media="screen"><!-- main template styles -->
+    <link href="~/assets/static/styles/themes/bronze_responsive.css" rel="stylesheet" media="screen"><!-- responsive styles -->
+    <link href="~/assets/static/styles/themes/bronze_blog.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'><!--Font OpenSans -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'><!--Font Montserrat -->
+
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url('../../assets/static/images/logos/14490328857_c218f12da4_b.jpg');
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="overlay" data-spy="scroll" data-target="#navbar-main" data-offset="50">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top black-style">
+        <div class="container-fluid">
+            <!-- Toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div><!-- Toggle get grouped for better mobile display -->
+            <!-- Nav list -->
+            <div class="collapse navbar-collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li><a href="#welcome" class="scroll-to">Welcome to Blog<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#content" class="scroll-to">Content</a></li>
+                    <li><a href="#contacts" class="scroll-to">Contact</a></li>
+                    <li><a href="@Url.Action("Index","Home")">Blog</a></li>
+                </ul>
+                <div class="divider"></div>
+                @Html.Partial("_LoginPartial")
+            </div><!-- Nav list -->
+        </div>
+    </nav>
+    <!-- /Navigation -->
+    <!-- Welcome section -->
+    <section class="welcome-section-wrapper js-fullscreen js-welcome-parallax" id="welcome">
+        <div class="welcome-section-inner container text-center">
+            <div class="title-main"><span><strong class="text-color">Dexter's</strong></span>Blog</div>
+            <div class="subtitle-main"></div>
+            <p class="description-main white bordered">
+                
+            </p>
+        </div>
+        <div class="scroll-down"></div>
+    </section>
+    <!-- /Welcome section -->
+    <section class="section-wrapper bg-theme" id="content" style="padding-top: 20px">
+        <div class="about-section-inner container">
+            @RenderBody()
+        </div>
+    </section>
+
+    <div class="parallax"></div>
+                   
+    <!-- /Works section -->
+    <!-- logos (clients) section -->
+    @*<div class="between-sections js-between-parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="text-white centered">My clients</h3>
+                    <ul id="owl-clients" class="owl-carousel">
+                        <li><img src="~/assets/static/images/logos/clients_logo_01.png" alt=""></li>
+                        <li><img src="~/assets/static/images/logos/clients_logo_02.png" alt=""></li>
+                        <li><img src="~/assets/static/images/logos/clients_logo_03.png" alt=""></li>
+                        <li><img src="~/assets/static/images/logos/clients_logo_04.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <!-- /logos (clients) section -->
+    <!-- Contacts section -->
+    <section class="section-wrapper bg-theme" id="contact">
+        <div class="contacts-section-inner container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Contact Me</h2>
+                </div>
+            </div>
+
+            <!-- contact information -->
+            @*<div class="double-part-wrapper">
+                <!-- Left side (cover part) -->
+                <div class="title-part">
+                    <div class="title">contact information</div>
+                    <div id="caption-featured" class="caption-outside-wrapper">
+                        <div class="caption-title">Christina Summer</div>
+                        <ul class="list-with-icons contacts">
+                            <li><i class="fa fa-phone"></i>+0 (123) 456 78 90</li>
+                            <li><i class="fa fa-map-marker"></i>Los Santos, Richland av.</li>
+                            <li><i class="fa fa-envelope-o"></i>mymail@mail.com</li>
+                            <li><i class="fa fa-globe"></i>www.mysite.com</li>
+                        </ul>
+                    </div>
+                </div><!-- /Left side (cover part) -->
+                <!-- Right side (cover part) -->
+                <div class="cover-part tabs">
+                    <div id="google-map" class="google-map">
+                        <div id="google-map-container" class="google-map-container" data-lat="-12.043333" data-lng="-77.028333"></div>
+                        <ul class="gmap-tabs google-map-tabs right">
+                            <li class="active"><a href="javascript:void(0);" class="underline-small google-map-view">google map</a></li>
+                            <li><a href="javascript:void(0);" class="underline-small street-view">Street view</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /Right side (cover part) -->
+            </div>*@<!-- /contact information -->
+
+            @*<div class="row">
+                <div class="col-xs-12">
+                    <h3>E-mail Me</h3>
+                </div>
+            </div>*@
+
+            <!-- feedback section -->
+            <div class="row">
+                <div class="col-xs-12 col-md-6 contacts-col-left">
+                    <p class="text-right">Send me a message and I will connect back with you.</p>
+                    <p class="text-right text-muted"><em>Dexter Norwood</em></p>
+                </div>
+                <div class="col-xs-12 col-md-6 contacts-col-right">
+                    @using (Html.BeginForm("Contact","Home", FormMethod.Post, new { @class = "drop-line js-feedback-form"}))
+                    {
+                        @Html.AntiForgeryToken()
+                            <span class="input">
+                                <input class="input-field js-check-name" type="text" id="input-name" name="FromName">
+                                <label class="input-label" for="input-name">
+                                    <span class="input-label-content">Name</span>
+                                </label>
+                            </span>
+                            <span class="input">
+                                <input class="input-field js-check-email" type="email" id="input-mail" name="FromEmail">
+                                <label class="input-label" for="input-mail">
+                                    <span class="input-label-content">Your mail</span>
+                                </label>
+                            </span>
+                            <span class="input">
+                                <input class="input-field js-check-name" type="text" id="input-name" name="Subject">
+                                <label class="input-label" for="input-name">
+                                    <span class="input-label-content">Subject</span>
+                                </label>
+                            </span>
+                            <span class="input">
+                                <textarea class="input-field elastic js-check-message" rows="1" id="input-message" name="Body"></textarea>
+                                <label class="input-label" for="input-message">
+                                    <span class="input-label-content">Your message</span>
+                                </label>
+                            </span>
+                            <button class="btn btn-default" type="submit">Sent Message</button>
+                    }              
+                </div>
+            </div><!-- feedback section -->
+
+        </div>
+    </section>
+    <!-- /Contacts section -->
+    <!-- Footer section -->
+    <section class="footer-section inverted bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="~/assets/static/images/logos/Dexter_lab.jpg" class="footer-logo" alt="">
+                    <div class="footer-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 left">
+                                <span>Development by </span><a href="" target="_blank">Dexter Norwood</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 right">
+                                2017, All rights reserved
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row footer-row">
+                        <!-- social icons -->
+                        <div class="col-xs-12 col-sm-8 left socials">
+                            <ul class="list-underline">
+                                <li>
+                                    <div class="title">LinkedIn</div>
+                                    <a href="https://www.linkedin.com/in/dexter-norwood-0ab78773/"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                @*<li>
+                                    <div class="title">Twitter</div>
+                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <div class="title">Pinterest</div>
+                                    <a href=""><i class="fa fa-pinterest-p"></i></a>
+                                </li>*@
+                            </ul>
+                        </div><!-- /social icons -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Footer section -->
+    <!-- Drawer -->
+    <div class="drawer-wrapper hide">
+        <div class="scrollable">
+            <div class="tilt-effect-wrapper photo-main">
+                <img src="~/assets/static/images/streetart2.jpg" />
+            </div>
+            <div class="drawer-inside text-white">
+                <h1 class="text-white">Dexter Norwood</h1>
+                <div class="subheading">Designer & Developer</div>
+                <ul class="list-with-icons contacts">
+                    <li><i class="fa fa-phone"></i>(910) 261-1475</li>
+                    <li><i class="fa fa-map-marker"></i>Greensboro, NC</li>
+                    <li><i class="fa fa-envelope-o"></i>dnorwood22@gmail.com</li>
+                </ul>
+            </div>                   
+         </div>
+     </div>
+
+    <!-- drawer-toggle for show/hide left drawer -->
+    <div class="js-drawer-toggle drawer-toggle" data-target=".drawer-wrapper">
+        <div class="icon-drawer-wrapper">
+            <img src="~/assets/static/images/logos/Dexter_lab.jpg" alt="">
+        </div>
+    </div><!-- /drawer-toggle for show/hide left drawer -->
+    <!-- /Drawer -->
+    <!-- Vendor scripts -->
+    <script src="~/assets/static/vendor/jquery/dist/jquery.min.js"></script><!-- jQuery library -->
+    <script src="~/assets/static/vendor/bootstrap/dist/js/bootstrap.min.js"></script><!-- bootstrap library -->
+    <script src="~/assets/static/vendor/fancybox/source/jquery.fancybox.pack.js"></script><!-- Fancybox library -->
+    <script src="~/assets/static/vendor/fancybox/source/helpers/jquery.fancybox-media.js"></script><!-- Fancybox helper -->
+    <script src="~/assets/static/vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script><!-- Fancybox mousewheel -->
+    <script src="~/assets/static/vendor/owl.carousel/dist/owl.carousel.min.js"></script><!-- carousel library -->
+    <script src="~/assets/static/vendor/jquery.scrollTo/jquery.scrollTo.min.js"></script><!-- smooth scroll library -->
+    @*<script src="~/assets/static/vendor/jquery-elastic/jquery.elastic.source.js"></script><!-- elastic library -->*@
+    @*<script src="https://maps.googleapis.com/maps/api/js"></script>*@<!-- Google map API -->
+    @*<script src="~/assets/static/vendor/gmaps/gmaps.min.js"></script><!-- gmap library -->*@
+    <script src="~/assets/static/vendor/isotope/dist/isotope.pkgd.min.js"></script><!-- isotope library -->
+    <script src="~/assets/static/vendor/ImageTiltEffect/js/tiltfx.js"></script><!-- tilt effect -->
+    <script src="~/assets/static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script><!-- imagesloaded library -->
+    <script src="~/assets/static/vendor/retina.js/dist/retina.min.js"></script><!-- retina library -->
+   @* <script src="~/assets/static/vendor/jquery-validation/dist/jquery.validate.min.js"></script><!-- jquery validation -->*@
+    <script src="~/assets/static/vendor/parallax.js/parallax.min.js"></script><!-- parallax library -->
+    <!-- Template/user scripts -->
+   @* <script src="~/assets/static/scripts/search.min.js"></script>*@
+    <script src="~/assets/static/scripts/scroll-to.min.js"></script>
+    <script src="~/assets/static/scripts/fancybox.min.js"></script>
+    <script src="~/assets/static/scripts/carousel.min.js"></script>
+    @*<script src="~/assets/static/scripts/elastic-fields.min.js"></script>*@
+    <script src="~/assets/static/scripts/menu.min.js"></script>
+    <script src="~/assets/static/scripts/drawer-tilt.min.js"></script>
+    <script src="~/assets/static/scripts/portfolio.min.js"></script>
+    @*<script src="~/assets/static/scripts/maps.min.js"></script>*@
+    @*<script src="~/assets/static/scripts/feedback.min.js"></script>*@
+    @*<script src="~/assets/static/scripts/form-effects.min.js"></script>*@
+    <script src="~/assets/static/scripts/clients-carousel.min.js"></script>
+    <script src="~/assets/static/scripts/parallax.min.js"></script>
+    <script src="~/assets/static/scripts/fullscreen.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

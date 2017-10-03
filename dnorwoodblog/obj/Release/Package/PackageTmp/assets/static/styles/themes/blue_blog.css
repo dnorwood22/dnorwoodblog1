@@ -1,0 +1,274 @@
+/* CONTENT
+Connect this styles for blog/topic pages
+------------------------------------------
+  
+  01. Blog main settings
+  		Blog topic header
+  		Topic body
+  		Comments
+  		Buttons (back-button)
+
+------------------------------------------ */
+/* Import styles */
+.separator-v-black {
+  border: 0 solid transparent;
+  border-left-width: 1px;
+  -moz-border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+  -webkit-border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+  -o-border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+  border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+}
+.separator-h-black {
+  border: 0 solid transparent;
+  border-bottom-width: 1px;
+  -moz-border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+  -webkit-border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+  -o-border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+  border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+}
+.separator-v-white {
+  border: 0 solid transparent;
+  border-left-width: 1px;
+  -moz-border-image: url('../images/elements/separator_v_white.png') 0 1 repeat;
+  -webkit-border-image: url('../images/elements/separator_v_white.png') 0 1 repeat;
+  -o-border-image: url('../images/elements/separator_v_white.png') 0 1 repeat;
+  border-image: url('../images/elements/separator_v_white.png') 0 1 repeat;
+}
+.separator-h-white {
+  border: 0 solid transparent;
+  border-bottom-width: 1px;
+  -moz-border-image: url('../images/elements/separator_h_white.png') 1 0 repeat;
+  -webkit-border-image: url('../images/elements/separator_h_white.png') 1 0 repeat;
+  -o-border-image: url('../images/elements/separator_h_white.png') 1 0 repeat;
+  border-image: url('../images/elements/separator_h_white.png') 1 0 repeat;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+/* 01. Blog main settings
+------------------------------------------ */
+.blog-wrapper {
+  padding: 30px 0 60px;
+}
+.blog-wrapper .blog-title {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+.navbar-default {
+  text-align: left;
+}
+.topic-list {
+  padding-bottom: 40px;
+}
+/* Blog topic header */
+.blog-topic-header {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blog-topic-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.blog-topic-header:hover .overlay {
+  opacity: .75;
+}
+.blog-topic-header .container {
+  height: 400px;
+}
+.nav-topic {
+  display: table;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.nav-topic.pagination {
+  padding-top: 50px;
+  bottom: 0;
+  margin: 0;
+  margin-left: -15px;
+  margin-top: 40px;
+}
+.nav-topic.pagination .previous,
+.nav-topic.pagination .next {
+  padding: 0 15px;
+}
+.nav-topic.pagination .previous a:after,
+.nav-topic.pagination .next a:after {
+  left: 15px;
+  content: '';
+}
+.nav-topic.pagination .next a:after {
+  left: auto;
+  right: 15px;
+  content: '';
+}
+.nav-topic .nav-topic-inner {
+  display: table-row;
+}
+.nav-topic .previous,
+.nav-topic .next {
+  display: table-cell;
+  position: relative;
+  padding: 0;
+  padding-right: 100px;
+  width: 50%;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+.nav-topic .previous .small-screen,
+.nav-topic .next .small-screen {
+  display: none;
+}
+.nav-topic .previous a,
+.nav-topic .next a {
+  padding-bottom: 20px;
+  color: #333333;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.nav-topic .previous a:hover,
+.nav-topic .next a:hover,
+.nav-topic .previous a:focus,
+.nav-topic .next a:focus {
+  color: #63a3b1;
+}
+.nav-topic .previous a:after,
+.nav-topic .next a:after {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  display: block;
+  content: '';
+  width: 80px;
+  height: 5px;
+  background-color: #333333;
+}
+.nav-topic .next {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 100px;
+}
+.nav-topic .next a:after {
+  left: auto;
+  right: 0;
+}
+.nav-topic.inverse .previous a,
+.nav-topic.inverse .next a {
+  color: #ffffff;
+}
+.nav-topic.inverse .previous a:hover,
+.nav-topic.inverse .next a:hover,
+.nav-topic.inverse .previous a:focus,
+.nav-topic.inverse .next a:focus {
+  color: #63a3b1;
+}
+.nav-topic.inverse .previous a:after,
+.nav-topic.inverse .next a:after {
+  background-color: #ffffff;
+}
+/* Topic body */
+.topic-section {
+  padding-bottom: 30px;
+}
+.topic-body {
+  padding-bottom: 80px;
+}
+.topic-body > p {
+  padding-bottom: 40px;
+}
+.topic-body img {
+  margin: 5px 0 15px;
+}
+/* Comments */
+.comments-col-right {
+  padding: 30px;
+  border: 0 solid transparent;
+  border-left-width: 1px;
+  -moz-border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+  -webkit-border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+  -o-border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+  border-image: url('../images/elements/separator_v_black.png') 0 1 repeat;
+}
+ul.comments {
+  color: #333333;
+  margin-top: 25px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+ul.comments.empty:after {
+  display: block;
+  content: 'No comments. Be the first';
+  margin-left: 25px;
+  padding-top: 25px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  text-transform: uppercase;
+  opacity: .5;
+}
+ul.comments li {
+  padding: 20px 25px;
+  border: 0 solid transparent;
+  border-bottom-width: 1px;
+  -moz-border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+  -webkit-border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+  -o-border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+  border-image: url('../images/elements/separator_h_black.png') 1 0 repeat;
+}
+ul.comments li:last-child {
+  border-bottom: 0 solid transparent;
+}
+ul.comments li .name {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+ul.comments li .date {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  opacity: .5;
+}
+ul.comments li .date .time {
+  float: right;
+}
+ul.comments li .body {
+  padding-top: 20px;
+}
+.post-comment {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+/* Buttons */
+.back-btn {
+  line-height: 60px;
+}

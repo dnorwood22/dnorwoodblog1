@@ -1,0 +1,105 @@
+﻿@model IPagedList<dnorwoodblog.Models.Post>
+@using PagedList;
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<section class="section-wrapper bg-theme blog-wrapper">
+    <div class="blog-section-inner container relative">
+        <div class="row">
+            <!-- go to the main page -->
+            <div class="col-xs-12 col-sm-6 btn-to-back">
+                @if (User.IsInRole("Admin"))
+                {
+                    <a href="@Url.Action("Index","Posts")" class="btn btn-link no-padding left-icon"><i class="fa fa-key"></i>admin</a>
+                }
+            </div><!-- /go to the main page -->
+            <!-- search -->
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+                <div class="col-xs-12 col-sm-6 search-wrapper">
+                    <form class="search-form">
+                        <input name="searchStr" type="text" placeholder="Search" class="js-search-input search-input" value="@ViewBag.Search">
+                        <button class="btn btn-link hover"321 type="submit"><i class="fa fa-search"></i>Search</button>
+                    </form>
+                </div><!-- /search -->
+            }
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="blog-title">Welcome to my blog</h2>
+            </div>
+        </div>
+
+        @foreach (var post in Model)
+        {
+            <!-- topic list -->
+            <div class="topic-list">
+                <!-- topic preview -->
+                <div class="double-part-wrapper">
+                    <div class="title-part">
+                        <a href="@Url.Action("Details", "Posts", new { slug = post.Slug })" class="title">@post.Title</a>
+                        <div class="icons-line-wrapper">
+                            @*<div class="icons-line">
+                                    <a href="" class="l-tooltip l-external-link"><i class="fa fa-external-link-square"></i></a>
+                                    <a href="" class="l-tooltip l-link"><i class="fa fa-link"></i></a>
+                                    <a href="" class="l-tooltip l-share"><i class="fa fa-share-alt"></i></a>
+                                </div>*@
+                        </div>
+                        <div class="author">By Dexter Norwood</div>
+                        <hr />
+
+                        @if (post.Body.Length >= 150)
+                        {
+                            <p>@Html.Raw(post.Body.Substring(0, 150))<span> ...</span></p>
+                        }
+                        else
+                        {
+                            <p>@Html.Raw(post.Body)</p>
+                        }
+                        @*<ul class="list-tags">
+                                <li>Tag</li>
+                                <li>Additional Tag</li>
+                                <li>Topic</li>
+                                <li>Blog</li>
+                                <li>Winter</li>
+                            </ul>*@
+                        <div class="date">@post.Created</div>
+                        <a href="@Url.Action("Details", "Posts", new { slug = post.Slug })" class="comments">Comments: <span>@post.Comments.Count</span></a>
+                    </div>
+                    <div class="cover-part">
+                        <a href="">
+                            <img src="@post.MediaUrl" alt="..." class="cover-img" style="max-height: 400px">
+                        </a>
+                    </div>
+                </div><!-- /topic preview -->
+            </div><!-- /topic list -->
+        }
+
+
+        <!-- topic navigator/pagination -->
+        @*<div class="nav-topic pagination">
+                <div class="nav-topic-inner">
+                    <div class="previous">
+                        <a href="">
+                            <div class="small-screen">Previous</div>
+                            <span>Older topics</span>
+                        </a>
+                    </div>
+                    <div class="next">
+                        <a href="">
+                            <div class="small-screen">Next topic</div>
+                            <span>Newest topics</span>
+                        </a>
+                    </div>
+                </div>
+            </div>*@<!-- /topic navigator/pagination -->
+
+    </div>
+</section>
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchStr = ViewBag.Search }))

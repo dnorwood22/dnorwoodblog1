@@ -1,0 +1,16 @@
+{
+  "name": "leta.team.artrow.net",
+  "private": true,
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compress": "^0.12.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "load-grunt-tasks": "~0.4.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}

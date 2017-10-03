@@ -1,0 +1,25 @@
+{
+  "name": "estro",
+  "private": true,
+  "homepage": "http://team.artrow.net/templates/estro/",
+  "dependencies": {
+    "ImageTiltEffect": "git@github.com:codrops/ImageTiltEffect.git",
+    "bootstrap": "~3.2.0",
+    "fancybox": "~2.1.5",
+    "font-awesome": "~4.5.0",
+    "gmaps": "~0.4.22",
+    "isotope": "~2.0.1",
+    "jquery-elastic": "git@github.com:janjarfalk/jquery-elastic.git",
+    "jquery.scrollTo": "~2.1.2",
+    "owl.carousel": "~2.1.6",
+    "sharrre": "~1.3.5",
+    "vide": "~0.5.0",
+    "vegas": "^2.2.0",
+    "imagesloaded": "^4.1.0",
+    "retina.js": "^1.3.0",
+    "jquery-validation": "jquery.validation#^1.15.0",
+    "parallax.js": "^1.4.2",
+    "jquery.fitvids": "fitvids#^1.1.0",
+    "jquery": "^3.1.1"
+  }
+}

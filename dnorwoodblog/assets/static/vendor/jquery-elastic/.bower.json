@@ -1,0 +1,14 @@
+{
+  "name": "jquery-elastic",
+  "homepage": "https://github.com/janjarfalk/jquery-elastic",
+  "version": "1.6.10",
+  "_release": "1.6.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.6.10",
+    "commit": "af2ac1a71fd73e056a8ecaa9fd59fd9f499efece"
+  },
+  "_source": "git@github.com:janjarfalk/jquery-elastic.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:janjarfalk/jquery-elastic.git"
+}
